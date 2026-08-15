@@ -40,7 +40,7 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background: var(--paper);
-  border-top: 4px solid var(--green);
+  padding-top: 8px; /* clears the fixed progress strip */
 }
 
 ::selection {
@@ -95,7 +95,7 @@ a:hover {
   padding: 1.1rem var(--gutter);
   border-bottom: 1px solid var(--line);
   position: sticky;
-  top: 0;
+  top: 8px;
   background: color-mix(in srgb, var(--paper) 92%, transparent);
   backdrop-filter: blur(6px);
   z-index: 5;
@@ -165,6 +165,10 @@ a:hover {
 }
 
 .hero h1 .cycling {
+  color: var(--green);
+}
+
+.flick {
   color: var(--green);
 }
 
@@ -543,6 +547,95 @@ a:hover {
   .about-photo {
     order: -1;
   }
+}
+
+/* ---------------- progress strip (fixed, scroll-linked) ---------------- */
+
+.progress-strip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  display: flex;
+  gap: 2px;
+  z-index: 20;
+  background: var(--paper);
+}
+
+.progress-strip span {
+  flex: 1 1 0;
+  background: var(--line);
+  opacity: 0.45;
+  transition: opacity 0.25s ease, background 0.25s ease;
+}
+
+.progress-strip span.marker {
+  opacity: 0.8;
+}
+
+.progress-strip span.lit {
+  opacity: 1;
+}
+
+.progress-strip span.lit.r-hydro { background: var(--green); }
+.progress-strip span.lit.r-charged { background: var(--amber); }
+.progress-strip span.lit.r-polar { background: var(--ink-soft); }
+
+/* ---------------- project filters ---------------- */
+
+.filter-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 1.3rem;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.32rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: border-color 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.filter-btn.is-active {
+  border-color: var(--ink);
+  color: var(--ink);
+  background: color-mix(in srgb, var(--green) 10%, var(--card));
+}
+
+.filter-btn:not([data-filter="all"])::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: var(--line);
+}
+
+.filter-ml::before { background: var(--green) !important; }
+.filter-bio::before { background: var(--amber) !important; }
+.filter-sys::before { background: var(--ink) !important; }
+.filter-web::before { background: var(--ink-soft) !important; }
+
+.js .entry.dimmed,
+.entry.dimmed {
+  opacity: 0.22;
+}
+
+.entry {
+  transition: opacity 0.3s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
