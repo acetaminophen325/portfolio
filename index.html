@@ -1,68 +1,340 @@
 <!doctype html>
 <html lang="en">
 
-<!--
-WRITTEN BY: Jovan Ng
-EMAIL: jovanhng@gmail.com
--->
-
 <head>
   <meta charset="utf-8">
   <meta name="author" content="Jovan Ng">
-  <meta name="description" content="Personal Portfolio">
+  <meta name="description" content="Jovan Ng builds and serves AI/ML systems and understands the biology they operate on. CS (Intelligent Systems) + Biomedical Engineering, UC Irvine.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jovan's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#F6F7F3">
+  <title>Jovan Ng · ML for living systems</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E7C5B'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' fill='%23F6F7F3' text-anchor='middle'%3EJ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Archivo:wght@400;500;600&family=Fragment+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <nav class="navbar red-block">
-    <div class="container">
-      <a href="index.html" class="logo">Jovan's Portfolio</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <a class="skip-link" href="#work">Skip to work</a>
+
+  <header class="site-header">
+    <a href="#top" class="wordmark">jovan_ng</a>
+    <nav aria-label="Site">
+      <ul class="site-nav">
+        <li><a href="#work">work</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
-  <div class="menu-toggle">☰</div>
+  <main id="top">
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to My Portfolio</h1>
-      <p>A simple showcase of my projects and skills.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="kicker">&gt;jovan_ng · uc irvine · b.s. computer science + b.s. biomedical engineering</p>
+      <h1 id="hero-title" class="decode" data-text="Machine learning, fluent in biology.">Machine learning, fluent in biology.</h1>
+      <p class="hero-sub">
+        I build and serve AI/ML systems and understand the biological and clinical
+        context they operate in. Computer Science with a specialization in Intelligent
+        Systems, plus Biomedical Engineering, UC Irvine, Class of 2026. Now doing
+        applied ML research in the Duran Computational Lab at UC Riverside.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#work">View work</a>
+        <a class="btn btn-quiet" href="mailto:jovanhng@gmail.com">Get in touch</a>
+      </div>
+
+      <figure class="residue-figure" aria-hidden="true">
+        <div class="residue-strip" id="residue-strip" data-seq="GIGKFLHSAKKFGKAFVGEIMNS"></div>
+        <figcaption class="residue-caption">&gt;magainin_2 · antimicrobial peptide · colored by residue class</figcaption>
+      </figure>
     </section>
-    <section id="about" class="white-block">
-      <h2>About Me</h2>
-      <img src="professional_jovan.png" alt="Jovan Ng, Biomedical Engineering student" class="profile-photo">
-      <p class="spaced-paragraph">
-        Hi! I’m Jovan Ng, a third-year Biomedical Engineering and Data Science student at the University of California, Irvine. As a member of the Campuswide Honors Collegium, I’m deeply committed to academic excellence and creative problem-solving. My passion lies in leveraging technology to tackle real-world challenges—whether through analyzing data, optimizing processes, or designing innovative solutions.
-      </p>
-      <p class="spaced-paragraph">
-        Over the years, I’ve developed powerful technical skills in MATLAB, Python, and C++, complemented by hands-on experience with tools like SolidWorks and LabVIEW. My projects range from simulating distributed systems and designing cost-effective medical devices to applying image-processing techniques for early glaucoma detection. These experiences have sharpened my ability to bridge theoretical concepts and practical applications, as well as bridge the gap between the fields of computer science and biomedical applications!
-      </p>
-      <p class="spaced-paragraph">
-        Feel free to connect with me at jovanhng@gmail.com or reach out if you’d like to collaborate on an exciting project!
-      </p>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <header class="section-head">
+        <p class="fasta">&gt;work</p>
+        <h2 id="work-title">Featured work</h2>
+        <p class="section-note">
+          Research entries are shown as narrative while publication is pending.
+          Repos appear here as they go public.
+        </p>
+      </header>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <p class="status status-pending">publication pending</p>
+          <ul class="tags" aria-label="Domains">
+            <li class="tag tag-ml">ml</li>
+            <li class="tag tag-bio">bio</li>
+          </ul>
+          <p class="meta-line">research · computational biology lab, UCI</p>
+        </div>
+        <div class="entry-body">
+          <h3>Antifungal peptide design</h3>
+          <p>
+            A generative machine learning pipeline for designing antifungal peptides.
+            Protein language models (ProtT5, ESM-2) drive candidate generation and
+            representation, a ranking layer prioritizes candidates, and the survivors
+            are validated in silico with GPU-accelerated molecular dynamics and
+            AlphaFold3 structure prediction.
+          </p>
+          <p class="entry-foot">Two manuscripts in preparation. Code and results stay private until publication.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <p class="status status-progress">writeup in progress</p>
+          <ul class="tags" aria-label="Domains">
+            <li class="tag tag-ml">ml</li>
+            <li class="tag tag-sys">systems</li>
+            <li class="tag tag-bio">bio</li>
+          </ul>
+          <p class="meta-line">research · ML systems</p>
+        </div>
+        <div class="entry-body">
+          <h3>Agentic genomics pipeline</h3>
+          <p>
+            An always-on agentic pipeline running on an NVIDIA DGX Spark. Bioinformatics
+            steps are wrapped as MCP tools, local models are served with vLLM and Ollama
+            behind an OpenAI-compatible endpoint, and an agent orchestrates the end-to-end
+            genomics workflow with quality gates, retries, and monitoring. I own the stack
+            from containers and GPU memory budgeting up through the agent and tool layer.
+          </p>
+          <p class="entry-foot">A sanitized architecture writeup is on the way and will live here and on GitHub.</p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <p class="status status-progress">repo in progress</p>
+          <ul class="tags" aria-label="Domains">
+            <li class="tag tag-ml">ml</li>
+          </ul>
+          <p class="meta-line">deep RL · group project, rebuilt</p>
+        </div>
+        <div class="entry-body">
+          <h3>Deep RL: Mario from pixels</h3>
+          <p>
+            PPO agents that learn Super Mario Bros from raw pixels: a CNN policy over
+            stacked grayscale frames, plus a CNN-LSTM RecurrentPPO variant that adds
+            temporal memory. I designed the reward function and the training pipeline,
+            ran vectorized environments for throughput, and used TensorBoard to diagnose
+            and fix training stalls.
+          </p>
+          <!-- TODO(jovan): drop gameplay GIFs into assets/ and swap the placeholder below.
+               Example: <img src="assets/mario-run.gif" alt="PPO agent clearing level 1-1" loading="lazy"> -->
+          <figure class="media-slot" aria-label="Gameplay capture placeholder">
+            <p class="media-slot-label">gameplay capture · gif goes here</p>
+          </figure>
+          <p class="entry-foot">
+            Built with a team. I'm rebuilding my components in a fresh repo,
+            <span class="mono">mario-ppo-rl</span>, with team credit and a link to the original.
+            <!-- TODO(jovan): when public, link it:
+                 <a href="https://github.com/acetaminophen325/mario-ppo-rl">mario-ppo-rl</a> -->
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <p class="status status-progress">repo rename in progress</p>
+          <ul class="tags" aria-label="Domains">
+            <li class="tag tag-ml">ml</li>
+          </ul>
+          <p class="meta-line">NLP · team final, ~60% mine</p>
+        </div>
+        <div class="entry-body">
+          <h3>Text classification with TextCNN</h3>
+          <p>
+            An end-to-end NLP training pipeline: tokenization, vocabulary construction,
+            and batching feeding a TextCNN with parallel convolutional filters, tuned on
+            a validation split, with reproducible run instructions.
+          </p>
+          <p class="entry-foot">
+            Team final project; roughly 60% of the code is mine, with contributions noted
+            in the README of <span class="mono">nlp-text-classification</span>.
+            <!-- TODO(jovan): when renamed + public, link it:
+                 <a href="https://github.com/acetaminophen325/nlp-text-classification">nlp-text-classification</a> -->
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <p class="status status-progress">repo rename in progress</p>
+          <ul class="tags" aria-label="Domains">
+            <li class="tag tag-sys">systems</li>
+          </ul>
+          <p class="meta-line">software · solo</p>
+        </div>
+        <div class="entry-body">
+          <h3>Campus Navigator</h3>
+          <p>
+            A real-time, location-aware navigator for UCI: it knows where you are, where
+            your next class is, and how to get there. Python, built end to end. Almost
+            entirely my own work.
+          </p>
+          <p class="entry-foot">
+            Repo: <span class="mono">campus-navigator</span>, going public after a README pass.
+            <!-- TODO(jovan): when renamed + public, link it:
+                 <a href="https://github.com/acetaminophen325/campus-navigator">campus-navigator</a> -->
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <p class="status status-progress">website repo, readme pass</p>
+          <ul class="tags" aria-label="Domains">
+            <li class="tag tag-bio">bio</li>
+            <li class="tag tag-web">web</li>
+          </ul>
+          <p class="meta-line">BME capstone · BioEngine Symposium</p>
+        </div>
+        <div class="entry-body">
+          <h3>Earicular: auricular reconstruction capstone</h3>
+          <p>
+            Two contributions to an ear reconstruction capstone. I built the team's
+            project website solo (HTML, CSS, JavaScript, deployed over SFTP). On the
+            engineering side, I developed the MATLAB biomechanical analysis pipeline:
+            Instron force-displacement data converted to engineering stress-strain,
+            extracting ultimate tensile strength, strain at failure, resilience,
+            toughness, and Young's modulus by linear regression.
+          </p>
+          <p>
+            The pipeline benchmarked an allograft against published autologous cartilage
+            values (Young's modulus 13.5 ± 9.9 MPa, UTS 4.9 ± 3.2 MPa, within
+            physiological range). Presented at the BioEngine Symposium.
+          </p>
+          <p class="entry-foot">
+            Website repo is fully mine.
+            <!-- TODO(jovan): link the website repo when its README pass is done. -->
+          </p>
+        </div>
+      </article>
+
+      <aside class="also">
+        <p class="fasta">&gt;also</p>
+        <p>
+          Lung cancer survey classification: a reproducible ML pipeline (cleaning,
+          encoding, scaling, class-imbalance handling) comparing KNN, logistic
+          regression, and an MLP, reported with macro-averaged metrics. Team project;
+          about 40% mine, with credit detailed in the repo.
+        </p>
+      </aside>
     </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <header class="section-head">
+        <p class="fasta">&gt;about</p>
+        <h2 id="about-title">Two degrees, one direction</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I studied two things at once on purpose. Computer Science, specialized in
+            Intelligent Systems, taught me to build and serve machine learning systems.
+            Biomedical Engineering taught me what those systems are for: real tissue,
+            real assays, real clinical constraints. Plenty of ML work treats biology as
+            a dataset, and plenty of biology treats ML as a black box. I live in the
+            gap, and it's the most exciting place I know.
+          </p>
+          <p>
+            Right now I'm a research assistant in the Duran Computational Lab at UC
+            Riverside, building automated, reproducible genomics and
+            structure-prediction workflows on GPU/HPC infrastructure, with two
+            manuscripts in preparation. I care about work that holds up: pipelines that
+            rerun cleanly, results that survive scrutiny, and tools that lab members can
+            pick up without me in the room.
+          </p>
+          <p>
+            The rest of my background keeps me grounded in the physical side of the
+            field. I've debugged embedded firmware as a design engineering intern,
+            learned FDA design controls, and put in bench time with PCR, gel
+            electrophoresis, and mammalian cell culture. When I build a model for
+            biology, I know what the data cost to produce, and I want the tools I ship
+            to be worthy of it.
+          </p>
+        </div>
+        <img src="assets/jovan-graduation.jpg" alt="Jovan Ng" class="about-photo" width="180" height="180" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <header class="section-head">
+        <p class="fasta">&gt;skills</p>
+        <h2 id="skills-title">Toolkit</h2>
+      </header>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>ai / ml</h3>
+          <ul>
+            <li>PyTorch, TensorFlow, scikit-learn</li>
+            <li>Protein language models (ProtT5, ESM-2)</li>
+            <li>Reinforcement learning (PPO, RecurrentPPO)</li>
+            <li>NLP pipelines (TextCNN)</li>
+            <li>AlphaFold3, GROMACS molecular dynamics</li>
+            <li>TensorBoard diagnostics</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>agentic / serving</h3>
+          <ul>
+            <li>MCP tool design</li>
+            <li>vLLM, Ollama</li>
+            <li>OpenAI-compatible endpoints</li>
+            <li>Quality gates, retries, monitoring</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>systems / infra</h3>
+          <ul>
+            <li>Docker, Conda, Git, SSH</li>
+            <li>NVIDIA DGX, GPU memory budgeting</li>
+            <li>HPC clusters, Linux</li>
+            <li>Containerized, reproducible pipelines</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>bio / data</h3>
+          <ul>
+            <li>RNA-seq workflows (SRA-toolkit, salmon)</li>
+            <li>Biomechanical testing + analysis</li>
+            <li>PCR, gel electrophoresis, cell culture</li>
+            <li>FDA design controls</li>
+            <li>Python data stack (pandas, NumPy), MATLAB</li>
+          </ul>
+        </div>
+      </div>
+      <p class="skills-langs">Languages: Python · C/C++ · MATLAB · JavaScript/TypeScript · C# · HTML/CSS</p>
+    </section>
+
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <header class="section-head">
+        <p class="fasta">&gt;contact</p>
+        <h2 id="contact-title">Let's talk</h2>
+      </header>
+      <p class="contact-lede">
+        Open to roles and collaborations at the intersection of machine learning and
+        biology. Email is fastest.
+      </p>
+      <ul class="contact-links">
+        <li><a class="btn btn-solid" href="mailto:jovanhng@gmail.com">jovanhng@gmail.com</a></li>
+        <li><a class="btn btn-quiet" href="https://github.com/acetaminophen325">GitHub</a></li>
+        <li><a class="btn btn-quiet" href="https://linkedin.com/in/jovan-ng-5a5652226">LinkedIn</a></li>
+      </ul>
+    </section>
+
   </main>
 
-  <footer class="black-block">
-    <div class="social-links">
-      <a href="https://github.com/acetaminophen325" aria-label="GitHub">
-        <em class="fab fa-github"></em>
-      </a>
-      <a href="https://linkedin.com/in/jovan-ng-5a5652226" aria-label="LinkedIn">
-        <em class="fab fa-linkedin"></em>
-      </a>
-    </div>
-    <p>&copy; 2025 Jovan Ng | <a href="contact.html">Contact Me</a></p>
+  <footer class="site-footer">
+    <div class="residue-strip residue-strip-footer" data-seq="GIGKFLHSAKKFGKAFVGEIMNS" aria-hidden="true"></div>
+    <p>&copy; <span id="year">2026</span> Jovan Ng · built by hand, no frameworks</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
