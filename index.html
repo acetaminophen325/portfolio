@@ -18,6 +18,8 @@
 <body>
   <a class="skip-link" href="#work">Skip to work</a>
 
+  <div class="progress-strip" id="progress-strip" data-seq="GIGKFLHSAKKFGKAFVGEIMNS" aria-hidden="true"></div>
+
   <header class="site-header">
     <a href="#top" class="wordmark">jovan_ng</a>
     <nav aria-label="Site">
@@ -60,6 +62,13 @@
           Research entries are shown as narrative while publication is pending.
           Repos appear here as they go public.
         </p>
+        <div class="filter-row" role="group" aria-label="Filter projects by domain">
+          <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">all</button>
+          <button type="button" class="filter-btn filter-ml" data-filter="ml" aria-pressed="false">ml</button>
+          <button type="button" class="filter-btn filter-bio" data-filter="bio" aria-pressed="false">bio</button>
+          <button type="button" class="filter-btn filter-sys" data-filter="sys" aria-pressed="false">systems</button>
+          <button type="button" class="filter-btn filter-web" data-filter="web" aria-pressed="false">web</button>
+        </div>
       </header>
 
       <article class="entry">
