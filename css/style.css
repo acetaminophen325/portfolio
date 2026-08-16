@@ -405,6 +405,27 @@ a:hover {
   color: var(--ink-soft);
 }
 
+.entry-figure {
+  margin-top: 1.1rem;
+  max-width: var(--measure);
+}
+
+.entry-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.entry-figure figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
 .also {
   margin-top: 2.5rem;
   border-top: 1px solid var(--line);

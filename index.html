@@ -149,7 +149,7 @@
 
       <article class="entry">
         <div class="entry-meta">
-          <p class="status status-progress">repo rename in progress</p>
+          <p class="status status-live">repo live</p>
           <ul class="tags" aria-label="Domains">
             <li class="tag tag-ml">ml</li>
           </ul>
@@ -162,11 +162,16 @@
             and batching feeding a TextCNN with parallel convolutional filters, tuned on
             a validation split, with reproducible run instructions.
           </p>
+          <figure class="entry-figure">
+            <img src="assets/imdb-model-comparison.png"
+                 alt="Bar chart of test accuracy and F1 for Naive Bayes, Linear SVM, and TextCNN on IMDB; Linear SVM is highest at 0.876 accuracy and 0.874 F1."
+                 loading="lazy">
+            <figcaption>Test-set accuracy and F1 across the three models. The TF-IDF linear SVM edges out the from-scratch TextCNN.</figcaption>
+          </figure>
           <p class="entry-foot">
             Team final project; roughly 60% of the code is mine, with contributions noted
-            in the README of <span class="mono">nlp-text-classification</span>.
-            <!-- TODO(jovan): when renamed + public, link it:
-                 <a href="https://github.com/acetaminophen325/nlp-text-classification">nlp-text-classification</a> -->
+            in the README of
+            <a href="https://github.com/acetaminophen325/imdb-sentiment-classification">imdb-sentiment-classification</a>.
           </p>
         </div>
       </article>
