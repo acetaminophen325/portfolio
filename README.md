@@ -2,6 +2,8 @@
 
 Personal portfolio of Jovan Ng: CS (Intelligent Systems) + Biomedical Engineering at UC Irvine, now doing applied ML research in computational biology. The site's job is to carry the work that GitHub can't fully show yet, including two research projects that stay narrative-only until publication.
 
+Live at **[acetaminophen325.github.io/portfolio](https://acetaminophen325.github.io/portfolio/)**.
+
 Built by hand. No frameworks, no build step; the only external dependency is Google Fonts.
 
 ## Design
@@ -27,16 +29,6 @@ projects.html     redirect stub kept for old URLs
 contact.html      redirect stub kept for old URLs
 ```
 
-## Run locally
-
-Any static server works:
-
-```
-python -m http.server 8137
-```
-
-Then open http://localhost:8137.
-
 ## Status
 
-Some featured repos are being renamed and documented before going public; the site links them as they land. Contribution notes on group projects live in each entry.
+Deployed via GitHub Pages; the featured repos are public and linked from the work section. Contribution notes on group projects live in each entry.
