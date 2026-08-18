@@ -22,6 +22,11 @@
 
   --measure: 62ch;
   --gutter: clamp(1.25rem, 5vw, 4rem);
+  --maxw: 74rem;
+  /* Centers content to --maxw while full-width elements keep edge-to-edge
+     backgrounds/rules. Grows the side padding once the viewport exceeds the
+     band, so content never pins to the left on wide desktops. */
+  --edge: max(var(--gutter), calc((100% - var(--maxw)) / 2));
 }
 
 * {
@@ -92,7 +97,7 @@ a:hover {
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  padding: 1.1rem var(--gutter);
+  padding: 1.1rem var(--edge);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 8px;
@@ -136,8 +141,7 @@ a:hover {
 /* ---------------- hero ---------------- */
 
 .hero {
-  padding: clamp(3.5rem, 9vh, 6.5rem) var(--gutter) clamp(2.5rem, 6vh, 4rem);
-  max-width: 72rem;
+  padding: clamp(3.5rem, 9vh, 6.5rem) var(--edge) clamp(2.5rem, 6vh, 4rem);
 }
 
 .kicker {
@@ -252,9 +256,8 @@ a:hover {
 /* ---------------- sections ---------------- */
 
 .section {
-  padding: clamp(3rem, 8vh, 5.5rem) var(--gutter);
+  padding: clamp(3rem, 8vh, 5.5rem) var(--edge);
   border-top: 1px solid var(--line);
-  max-width: 72rem;
 }
 
 .section-head {
@@ -456,12 +459,30 @@ a:hover {
   margin-top: 1rem;
 }
 
-.about-photo {
-  border-radius: 8px;
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
+.portrait {
+  margin: 0;
+  width: 232px;
+  flex-shrink: 0;
+  background: var(--card);
   border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  border: 1px solid var(--line);
+}
+
+.portrait figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--green-text);
+  margin-top: 9px;
+  padding-left: 2px;
 }
 
 /* ---------------- skills ---------------- */
@@ -518,7 +539,7 @@ a:hover {
 .site-footer {
   background: var(--footer-bg);
   color: #C8D2CC;
-  padding: 2rem var(--gutter) 2.4rem;
+  padding: 2rem var(--edge) 2.4rem;
   margin-top: 2rem;
 }
 
@@ -565,7 +586,7 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .about-photo {
+  .portrait {
     order: -1;
   }
 }
