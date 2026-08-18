@@ -118,7 +118,7 @@
 
       <article class="entry">
         <div class="entry-meta">
-          <p class="status status-progress">repo in progress</p>
+          <p class="status status-live">repo live</p>
           <ul class="tags" aria-label="Domains">
             <li class="tag tag-ml">ml</li>
           </ul>
@@ -128,21 +128,21 @@
           <h3>Deep RL: Mario from pixels</h3>
           <p>
             PPO agents that learn Super Mario Bros from raw pixels: a CNN policy over
-            stacked grayscale frames, plus a CNN-LSTM RecurrentPPO variant that adds
-            temporal memory. I designed the reward function and the training pipeline,
-            ran vectorized environments for throughput, and used TensorBoard to diagnose
-            and fix training stalls.
+            stacked grayscale frames, plus a CNN-LSTM (RecurrentPPO) variant that adds
+            temporal memory. For the public rebuild I co-authored the training pipeline
+            and wrote a custom reward-shaping function and the recurrent variant myself;
+            the frame preprocessing is a teammate's.
           </p>
-          <!-- TODO(jovan): drop gameplay GIFs into assets/ and swap the placeholder below.
-               Example: <img src="assets/mario-run.gif" alt="PPO agent clearing level 1-1" loading="lazy"> -->
-          <figure class="media-slot" aria-label="Gameplay capture placeholder">
-            <p class="media-slot-label">gameplay capture · gif goes here</p>
+          <figure class="entry-figure">
+            <img src="assets/mario-demo.gif"
+                 alt="A trained PPO agent running and jumping through Super Mario Bros World 1-1."
+                 loading="lazy">
+            <figcaption>A trained CNN agent clearing World 1-1 (sped up).</figcaption>
           </figure>
           <p class="entry-foot">
-            Built with a team. I'm rebuilding my components in a fresh repo,
-            <span class="mono">mario-ppo-rl</span>, with team credit and a link to the original.
-            <!-- TODO(jovan): when public, link it:
-                 <a href="https://github.com/acetaminophen325/mario-ppo-rl">mario-ppo-rl</a> -->
+            Built with a team; rebuilt into
+            <a href="https://github.com/acetaminophen325/mario-ppo-rl">mario-ppo-rl</a>
+            with per-component credit and a link to the original.
           </p>
         </div>
       </article>
@@ -153,7 +153,7 @@
           <ul class="tags" aria-label="Domains">
             <li class="tag tag-ml">ml</li>
           </ul>
-          <p class="meta-line">NLP · team final, ~60% mine</p>
+          <p class="meta-line">NLP · team final, ~70% mine</p>
         </div>
         <div class="entry-body">
           <h3>Text classification with TextCNN</h3>
@@ -169,7 +169,7 @@
             <figcaption>Test-set accuracy and F1 across the three models. The TF-IDF linear SVM edges out the from-scratch TextCNN.</figcaption>
           </figure>
           <p class="entry-foot">
-            Team final project; roughly 60% of the code is mine, with contributions noted
+            Team final project; roughly 70% of the code is mine, with contributions noted
             in the README of
             <a href="https://github.com/acetaminophen325/imdb-sentiment-classification">imdb-sentiment-classification</a>.
           </p>
@@ -251,7 +251,7 @@
           Lung cancer survey classification: a reproducible ML pipeline (cleaning,
           encoding, scaling, class-imbalance handling) comparing KNN, logistic
           regression, and an MLP, reported with macro-averaged metrics. Team project;
-          about 40% mine, with credit detailed in the repo.
+          about 55% mine, with credit detailed in the repo.
         </p>
       </aside>
     </section>
